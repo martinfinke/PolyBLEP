@@ -54,10 +54,10 @@ inline double blep(double t, double dt) {
 inline double blamp(double t, double dt) {
     if (t < dt) {
         t = t / dt - 1;
-        return -1 / 3 * square_number(t) * t;
+        return -1 / 3.0 * square_number(t) * t;
     } else if (t > 1 - dt) {
         t = (t - 1) / dt + 1;
-        return 1 / 3 * square_number(t) * t;
+        return 1 / 3.0 * square_number(t) * t;
     } else {
         return 0;
     }
